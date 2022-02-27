@@ -12,6 +12,7 @@ function useSongInfo(){
 
         const fetchSongInfo = async() => {
             if(currentIdTrack){
+                console.log(currentIdTrack)
                 const trackinfo = await fetch(
                     `https://api.spotify.com/v1/tracks/${currentIdTrack}`,
                     {
@@ -21,10 +22,12 @@ function useSongInfo(){
                     }
                 ).then(res => res.json());
 
+
                 setSongInfo(trackinfo)
             }
 
         }
+        fetchSongInfo()
 
     }, [currentIdTrack, spotifyApi])
     return songInfo;

@@ -2,7 +2,7 @@ import {getProviders, signIn} from "next-auth/react"
 function Login({providers}){
     return (
         <div className="flex flex-col items-center bg-black min-h-screen w-full justify-center">
-           <img className = "w-52 mb-5" src="https://links.papareact.com/9x1" alt=""/>
+           <img className = "w-52 mb-5" src="https://tse3.mm.bing.net/th?id=OIP.MyKc5S3r-n8ER2kwZUHh7gHaDW&pid=Api&P=0&w=360&h=163" alt=""/>
            {Object.values(providers).map((provider) => (
                <div key={provider.name}>
                    <button className="bg-[#18D860] text-white p-5 rounded-full" onClick={() => signIn(provider.id, {callbackUrl:"/"})}>Login With {provider.name}</button>
